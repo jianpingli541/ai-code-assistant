@@ -1,0 +1,25 @@
+{
+  "name": "ai-code-assistant",
+  "version": "1.0.0",
+  "description": "AI Code Assistant - Smart coding companion",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "test": "vitest",
+    "lint": "eslint src/",
+    "db:migrate": "supabase db push",
+    "db:types": "supabase gen types typescript --linked > src/types/db.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.0",
+    "@anthropic-ai/sdk": "^0.36.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "tsx": "^4.19.0",
+    "vitest": "^3.0.0",
+    "eslint": "^9.0.0",
+    "@types/node": "^22.0.0"
+  }
+}
